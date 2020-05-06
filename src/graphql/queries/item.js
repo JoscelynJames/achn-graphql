@@ -1,12 +1,12 @@
 
-const itemType = require('../types/item');
-const graphql = require('graphql');
+import itemType from '../types/item';
+import { GraphQLString } from 'graphql';
 
-module.exports = {
+export default {
 	type: itemType,
 	// `args` describes the arguments that the `user` query accepts
 	args: {
-		id: { type: graphql.GraphQLString }
+		id: { type: GraphQLString }
 	},
 	resolve: (_, {id}) => {
 		return {

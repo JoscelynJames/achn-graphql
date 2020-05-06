@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const curtainTypeEnum = new GraphQLEnumType({
 	name: 'curtainTypeEnum',
@@ -11,4 +9,4 @@ const curtainTypeEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = curtainTypeEnum;
+export default curtainTypeEnum;

@@ -1,11 +1,9 @@
-const graphql = require('graphql');
+import { GraphQLString, GraphQLBoolean, GraphQLInt } from 'graphql';
 
 // Used Enums and Types
-const VariantID = require('../enums/variantId');
+import VariantID from '../enums/variantId';
 
-const { GraphQLString, GraphQLBoolean, GraphQLInt } = graphql;
-
-const variantType = new graphql.GraphQLObjectType({
+const variantType = new GraphQLObjectType({
 	name: 'Variant',
 	fields: {
 		image: {type: GraphQLString},
@@ -33,4 +31,4 @@ const variantType = new graphql.GraphQLObjectType({
 	}
 });
 
-module.exports = variantType;
+export default variantType;

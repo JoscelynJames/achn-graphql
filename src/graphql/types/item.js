@@ -1,29 +1,27 @@
-const graphql = require('graphql');
+import { GraphQLString, GraphQLBoolean, GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
 
 // Used Enums and Types
-const Size = require('../enums/size');
-const Version = require('../enums/version');
-const SpeakerType = require('../enums/speakerType');
-const LightingType = require('../enums/lightingType');
-const Catalog = require('../enums/catalog');
-const Variant = require('../enums/variantId');
-const VfxType = require('../enums/vfx');
-const WindowType = require('../enums/windowType');
-const WindowColor = require('../enums/windowColor');
-const PaneType = require('../enums/paneType');
-const CurtainType = require('../enums/curtainType');
-const CeilingType = require('../enums/ceiling');
-const SeasonalAvailability = require('../enums/seasonalAvailability');
-const PrimaryShape = require('../enums/primaryShape');
-const SecondaryShape = require('../enums/secondaryShape');
-const Category = require('../enums/category');
-const Style = require('../enums/style');
-const InteractEnum = require('../enums/interact');
-const Museum = require('../enums/museum');
+import Size from '../enums/size';
+import Version from '../enums/version';
+import SpeakerType from '../enums/speakerType';
+import LightingType from '../enums/lightingType';
+import Catalog from '../enums/catalog';
+import Variant from '../enums/variantId';
+import VfxType from '../enums/vfx';
+import WindowType from '../enums/windowType';
+import WindowColor from '../enums/windowColor';
+import PaneType from '../enums/paneType';
+import CurtainType from '../enums/curtainType';
+import CeilingType from '../enums/ceiling';
+import SeasonalAvailability from '../enums/seasonalAvailability';
+import PrimaryShape from '../enums/primaryShape';
+import SecondaryShape from '../enums/secondaryShape';
+import Category from '../enums/category';
+import Style from '../enums/style';
+import InteractEnum from '../enums/interact';
+import Museum from '../enums/museum';
 
-const { GraphQLString, GraphQLBoolean, GraphQLInt, GraphQLList } = graphql;
-
-const itemType = new graphql.GraphQLObjectType({
+const itemType = new GraphQLObjectType({
 	name: 'Item',
 	fields: {
 		sourceSheet: {type: Category},
@@ -71,4 +69,4 @@ const itemType = new graphql.GraphQLObjectType({
 	}
 });
 
-module.exports = itemType;
+export default itemType;

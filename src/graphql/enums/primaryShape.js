@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const primaryShapeEnum = new GraphQLEnumType({
 	name: 'primaryShapeEnum',
@@ -19,4 +17,4 @@ const primaryShapeEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = primaryShapeEnum;
+export default primaryShapeEnum;

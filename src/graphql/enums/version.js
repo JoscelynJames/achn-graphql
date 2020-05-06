@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 // TODO - graphql does not allow keys to have any numbers or special chars in it
 // I updated them to alpha but circle back to see if this works
 const versionEnumType = new GraphQLEnumType({
@@ -13,4 +11,4 @@ const versionEnumType = new GraphQLEnumType({
 	}
 });
 
-module.exports = versionEnumType;
+export default versionEnumType;

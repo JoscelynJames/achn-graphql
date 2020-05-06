@@ -1,6 +1,5 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+// const graphql = require('graphql');
+import { GraphQLEnumType } from 'graphql';
 
 const catalogEnumType = new GraphQLEnumType({
 	name: 'catalogEnumType',
@@ -11,4 +10,4 @@ const catalogEnumType = new GraphQLEnumType({
 	}
 });
 
-module.exports = catalogEnumType;
+export default catalogEnumType;

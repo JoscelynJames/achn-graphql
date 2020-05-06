@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const SecondaryShapeEnum = new GraphQLEnumType({
 	name: 'SecondaryShapeEnum',
@@ -11,4 +9,4 @@ const SecondaryShapeEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = SecondaryShapeEnum;
+export default SecondaryShapeEnum;

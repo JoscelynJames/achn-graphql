@@ -1,8 +1,4 @@
-
-
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const speakerTypeEnumType = new GraphQLEnumType({
 	name: 'speakerTypeEnumType',
@@ -14,4 +10,4 @@ const speakerTypeEnumType = new GraphQLEnumType({
 	}
 });
 
-module.exports = speakerTypeEnumType;
+export default speakerTypeEnumType;

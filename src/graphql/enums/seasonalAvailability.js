@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const seasonalAvailabilityEnum = new GraphQLEnumType({
 	name: 'seasonalAvailabilityEnum',
@@ -11,4 +9,4 @@ const seasonalAvailabilityEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = seasonalAvailabilityEnum;
+export default seasonalAvailabilityEnum;

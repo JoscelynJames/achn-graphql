@@ -1,10 +1,10 @@
 const graphql = require('graphql');
-const item = require('./queries/item');
+import itemType from './queries/item';
 
 var rootQueryType = new graphql.GraphQLObjectType({
 	name: 'Query', // used in description 
 	fields: { // Root queries
-		item,
+		item: itemType,
 		// items
 		// villager 
 		// villagers
@@ -17,4 +17,4 @@ var rootQueryType = new graphql.GraphQLObjectType({
 	}
 });
 
-module.exports = new graphql.GraphQLSchema({query: rootQueryType});
+export default new graphql.GraphQLSchema({query: rootQueryType});

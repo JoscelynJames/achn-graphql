@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const interactEnum = new GraphQLEnumType({
 	name: 'interactEnum',
@@ -11,4 +9,4 @@ const interactEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = interactEnum;
+export default interactEnum;

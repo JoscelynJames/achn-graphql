@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const styleEnum = new GraphQLEnumType({
 	name: 'styleEnum',
@@ -14,4 +12,4 @@ const styleEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = styleEnum;
+export default styleEnum;

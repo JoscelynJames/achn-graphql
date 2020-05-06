@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const vfxEnumType = new GraphQLEnumType({
 	name: 'vfxEnumType',
@@ -11,4 +9,4 @@ const vfxEnumType = new GraphQLEnumType({
 	}
 });
 
-module.exports = vfxEnumType;
+export default vfxEnumType;

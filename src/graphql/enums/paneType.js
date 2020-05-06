@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const paneTypeEnum = new GraphQLEnumType({
 	name: 'paneTypeEnum',
@@ -10,4 +8,4 @@ const paneTypeEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = paneTypeEnum;
+export default paneTypeEnum;

@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const variantIdEnum = new GraphQLEnumType({
 	name: 'variantIdEnum',
@@ -72,4 +70,4 @@ const variantIdEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = variantIdEnum;
+export default variantIdEnum;

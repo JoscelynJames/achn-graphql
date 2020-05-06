@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const windowTypeEnum = new GraphQLEnumType({
 	name: 'windowTypeEnum',
@@ -13,4 +11,4 @@ const windowTypeEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = windowTypeEnum;
+export default windowTypeEnum;

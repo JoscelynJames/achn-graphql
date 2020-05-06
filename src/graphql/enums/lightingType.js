@@ -1,8 +1,6 @@
 
 
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const lightingTypeEnum = new GraphQLEnumType({
 	name: 'lightingTypeEnum',
@@ -15,4 +13,4 @@ const lightingTypeEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = lightingTypeEnum;
+export default lightingTypeEnum;

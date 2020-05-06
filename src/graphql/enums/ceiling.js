@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const ceilingEnumType = new GraphQLEnumType({
 	name: 'ceilingEnumType',
@@ -14,4 +12,4 @@ const ceilingEnumType = new GraphQLEnumType({
 	}
 });
 
-module.exports = ceilingEnumType;
+export default ceilingEnumType;

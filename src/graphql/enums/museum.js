@@ -1,6 +1,4 @@
-const graphql = require('graphql');
-
-const { GraphQLEnumType } = graphql;
+import { GraphQLEnumType } from 'graphql';
 
 const musemEnum = new GraphQLEnumType({
 	name: 'museumEnum',
@@ -11,4 +9,4 @@ const musemEnum = new GraphQLEnumType({
 	}
 });
 
-module.exports = musemEnum;
+export default musemEnum;
