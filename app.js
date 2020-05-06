@@ -2,6 +2,9 @@
 import express from 'express';
 import graphQlHTTP from 'express-graphql';
 import schema from './src/graphql/root';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const PORT = 3000;
 const app = express();
