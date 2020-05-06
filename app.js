@@ -1,9 +1,9 @@
 // const express = require('express');
 import express from 'express';
 import graphQlHTTP from 'express-graphql';
-import schema from './src/graphql/root';
 import dotenv from 'dotenv';
-import { MongoClient } from 'mongodb';
+import schema from './src/graphql/root';
+import connectMongo from './src/utils/connectMongo';
 
 dotenv.config();
 
@@ -15,11 +15,6 @@ app.use('/graphql', graphQlHTTP({
 	graphiql: true,
 }));
 
-
-new MongoClient.connect(
-	process.env.MONGO_URL, 
-	{ useUnifiedTopology: true }, 
-	() => console.log('connected to mongo')
-);
+connectMongo.connect().then(console.log('connected to mongo'));
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
