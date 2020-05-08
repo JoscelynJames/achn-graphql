@@ -1,10 +1,11 @@
-import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql';
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLID } from 'graphql';
 
 import Category from '../enums/category';
 
 const nookMilesType = new GraphQLObjectType({
 	name: 'NookMile',
-	values: {
+	fields: {
+		_id: { type: GraphQLID },
 		sourceSheet: { type: GraphQLString },
 		name: { type: GraphQLString },
 		image: { type: GraphQLString },

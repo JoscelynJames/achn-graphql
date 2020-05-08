@@ -1,4 +1,4 @@
-import { GraphQLString, GraphQLBoolean, GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
+import { GraphQLString, GraphQLBoolean, GraphQLInt, GraphQLList, GraphQLObjectType, GraphQLID, GraphQLUnionType } from 'graphql';
 
 // Used Enums and Types
 import Size from '../enums/size';
@@ -18,54 +18,55 @@ import PrimaryShape from '../enums/primaryShape';
 import SecondaryShape from '../enums/secondaryShape';
 import Category from '../enums/category';
 import Style from '../enums/style';
-import InteractEnum from '../enums/interact';
+// import InteractEnum from '../enums/interact';
 import Museum from '../enums/museum';
 
 const itemType = new GraphQLObjectType({
 	name: 'Item',
 	fields: {
-		sourceSheet: {type: Category},
-		name: {type: GraphQLString},
-		patternTitle: {type: GraphQLString },
+		_id: { type: GraphQLID },
+		sourceSheet: { type: Category },
+		name: { type: GraphQLString },
+		patternTitle: { type: GraphQLString },
 		diy: {
 			type: GraphQLBoolean,
 			description: 'If this is item can be made via DIY recipe',
 		},
-		patternCustomize: {type: GraphQLBoolean },
-		size: {type: Size},
-		sourceNotes: {type: GraphQLString},
-		version: {type: Version},
-		interact: { type: InteractEnum},
-		tag: {type: GraphQLString},
-		speakerType: {type: SpeakerType },
-		lightingType: {type: LightingType },
-		catalog: {type: Catalog},
-		set: {type: GraphQLString},
-		series: {type: GraphQLString},
-		customizationKitCost: {type: GraphQLInt },
-		variants: {type: GraphQLList(Variant)},
-		doorDeco: {type: GraphQLBoolean},
-		vfx: {type: GraphQLBoolean },
-		vfxType: {type: VfxType },
-		windowType: {type: WindowType },
-		windowColor: {type: WindowColor },
-		paneType: {type: PaneType },
-		curtainType: {type: CurtainType },
-		curtainColor: {type: GraphQLString},
-		ceilingType: {type: CeilingType},
-		customize: {type: GraphQLBoolean},
-		uses: {type: GraphQLInt},
-		stackSize: {type: GraphQLInt},
-		seasonalAvailability: {type: SeasonalAvailability},
-		style: {type: Style},
-		primaryShape: {type: PrimaryShape},
-		secondaryShape: {type: SecondaryShape },
-		type: {type: GraphQLString},
-		museum: {type: Museum},
-		category: {type: Category},
-		realArtworkTitle: {type: GraphQLString},
-		artist: {type: GraphQLString},
-		museumDescription: {type: GraphQLString},
+		patternCustomize: { type: GraphQLBoolean },
+		size: { type: Size },
+		sourceNotes: { type: GraphQLString },
+		version: { type: Version },
+		// interact: { type: GraphQLBoolean | GraphQLString }, // come back to this
+		tag: { type: GraphQLString },
+		speakerType: { type: SpeakerType },
+		lightingType: { type: LightingType },
+		catalog: { type: Catalog },
+		set: { type: GraphQLString },
+		series: { type: GraphQLString },
+		customizationKitCost: { type: GraphQLInt },
+		variants: { type: GraphQLList(Variant) },
+		doorDeco: { type: GraphQLBoolean },
+		vfx: { type: GraphQLBoolean },
+		vfxType: { type: VfxType },
+		windowType: { type: WindowType },
+		windowColor: { type: WindowColor },
+		paneType: { type: PaneType },
+		curtainType: { type: CurtainType },
+		curtainColor: { type: GraphQLString },
+		ceilingType: { type: CeilingType },
+		customize: { type: GraphQLBoolean },
+		uses: { type: GraphQLInt },
+		stackSize: { type: GraphQLInt },
+		seasonalAvailability: { type: SeasonalAvailability },
+		style: { type: Style },
+		primaryShape: { type: PrimaryShape },
+		secondaryShape: { type: SecondaryShape },
+		type: { type: GraphQLString },
+		museum: { type: Museum },
+		category: { type: Category },
+		realArtworkTitle: { type: GraphQLString },
+		artist: { type: GraphQLString },
+		museumDescription: { type: GraphQLString },
 	}
 });
 

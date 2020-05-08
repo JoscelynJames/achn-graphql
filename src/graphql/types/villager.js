@@ -1,4 +1,4 @@
-import { GraphQLString, GraphQLObjectType } from 'graphql';
+import { GraphQLString, GraphQLObjectType, GraphQLList, GraphQLID } from 'graphql';
 
 // Enums and Types
 import Style from '../enums/style';
@@ -10,6 +10,7 @@ import Hobby from '../enums/hobby';
 const villagerType = new GraphQLObjectType({
 	name: 'Villager',
 	fields: {
+		_id: { type: GraphQLID },
 		sourceSheet: { type: GraphQLString },
 		name: { type: GraphQLString },
 		iconImage: { type: GraphQLString },
@@ -23,8 +24,8 @@ const villagerType = new GraphQLObjectType({
 		favoriteSong: { type: GraphQLString },
 		filename: { type: GraphQLString },
 		uniqueEntryId: { type: GraphQLString },
-		colors: { type: [Color] },
-		styles: { type: [Style] },
+		colors: { type: GraphQLList(Color) },
+		styles: { type: GraphQLList(Style) },
 	}
 });
 

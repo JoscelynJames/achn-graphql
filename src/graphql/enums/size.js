@@ -1,8 +1,8 @@
 import { GraphQLEnumType } from 'graphql';
 // TODO - graphql does not allow keys to have any numbers or special chars in it
 // I updated them to alpha but circle back to see if this works
-const sizeEnumType = new GraphQLEnumType({
-	name: 'sizeEnumType',
+const sizeEnum = new GraphQLEnumType({
+	name: 'sizeEnum',
 	values: {
 		'a': { value: '0.5x1' },
 		'b': { value: '1.5x1.5' },
@@ -23,4 +23,4 @@ const sizeEnumType = new GraphQLEnumType({
 	}
 });
 
-export default sizeEnumType;
+export default sizeEnum;

@@ -1,4 +1,4 @@
-import { GraphQLString, GraphQLInt, GraphQLObjectType, GraphQLBoolean } from 'graphql';
+import { GraphQLString, GraphQLInt, GraphQLObjectType, GraphQLBoolean, GraphQLList, GraphQLID } from 'graphql';
 
 // Enums and Types
 import Size from '../enums/size';
@@ -10,6 +10,7 @@ import ActiveMonths from '../enums/activeMonths';
 const creatureType = new GraphQLObjectType({
 	name: 'Creature',
 	fields: {
+		_id: { type: GraphQLID },
 		sourceSheet: { type: GraphQLString },
 		num: { type: GraphQLInt },
 		name: { type: GraphQLString },
@@ -28,11 +29,10 @@ const creatureType = new GraphQLObjectType({
 		furnitureFilename: { type: GraphQLString },
 		internalId: { type: GraphQLInt },
 		uniqueEntryId: { type: GraphQLString },
-		colors: { type: [Color] },
+		colors: { type: GraphQLList(Color) },
 		specialSell: { type: GraphQLInt },
 		activeMonths: { type: ActiveMonths },
 		weather: { type: Weather },
-  
 	}
 });
 

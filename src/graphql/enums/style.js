@@ -3,12 +3,12 @@ import { GraphQLEnumType } from 'graphql';
 const styleEnum = new GraphQLEnumType({
 	name: 'styleEnum',
 	values: {
-		'Active': {type: 'Active'},
-		'Cool': {type: 'Cool'},
-		'Cute': {type: 'Cute'},
-		'Elegant': {type: 'Elegant'},
-		'Gorgeous': {type: 'Gorgeous'},
-		'Simple': {type: 'Simple'},
+		'Active': { value: 'Active' },
+		'Cool': { value: 'Cool' },
+		'Cute': { value: 'Cute' },
+		'Elegant': { value: 'Elegant' },
+		'Gorgeous': { value: 'Gorgeous' },
+		'Simple': { value: 'Simple' },
 	}
 });
 

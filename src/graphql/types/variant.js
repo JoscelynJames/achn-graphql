@@ -1,4 +1,4 @@
-import { GraphQLString, GraphQLBoolean, GraphQLInt, GraphQLObjectType } from 'graphql';
+import { GraphQLString, GraphQLBoolean, GraphQLInt, GraphQLObjectType, GraphQLID } from 'graphql';
 
 // Enums and Types
 import VariantID from '../enums/variantId';
@@ -10,6 +10,7 @@ import LabelTheme from '../enums/labelTheme';
 const variantType = new GraphQLObjectType({
 	name: 'Variant',
 	fields: {
+		_id: { type: GraphQLID },
 		image: { type: GraphQLString },
 		variation: { type: GraphQLInt | GraphQLString },
 		filename: { type: GraphQLString },

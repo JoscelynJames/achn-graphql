@@ -1,19 +1,29 @@
 const graphql = require('graphql');
-import itemType from './queries/item';
+
+import getItem from './queries/getItem';
+import getAllItems from './queries/getAllItems';
+import getVillager from './queries/getVillager';
+import getAllVillagers from './queries/getAllVillagers';
+import getNookMilesItem from './queries/getNookMilesItem';
+import getAllNookMileItems from './queries/getAllNookMileItems';
+import getCreature from './queries/getCreature';
+import getAllCreatures from './queries/getAllCreatures';
+import getAchievement from './queries/getAchievement';
+import getAllAchievements from './queries/getAllAchievements';
 
 var rootQueryType = new graphql.GraphQLObjectType({
 	name: 'Query', // used in description 
 	fields: { // Root queries
-		item: itemType,
-		// items
-		// villager 
-		// villagers
-		// achievement
-		// achievements
-		// nookMilesItem
-		// nookMilesItems
-		// creature
-		// creatures
+		getItem,
+		getAllItems,
+		getVillager, 
+		getAllVillagers,
+		getAchievement,
+		getAllAchievements,
+		getNookMilesItem,
+		getAllNookMileItems,
+		getCreature,
+		getAllCreatures
 	}
 });
 
