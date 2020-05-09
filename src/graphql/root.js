@@ -27,4 +27,4 @@ var rootQueryType = new graphql.GraphQLObjectType({
 	}
 });
 
-export default new graphql.GraphQLSchema({query: rootQueryType});
+export default new graphql.GraphQLSchema({ query: rootQueryType });
